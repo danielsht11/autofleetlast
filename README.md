@@ -31,22 +31,18 @@ python 3.8.6 (at least)
    pip install -r requirements.txt
    ```
 
-4. Navigate to the backend directory:
-    ```
-   cd backend
-   ```
 5. Set the Flask app environment variable:
    - On Windows (Command Prompt):
      ```
-     set FLASK_APP=app
+     set FLASK_APP=backend/app
      ```
      or PowerShell:
      ```
-     $env:FLASK_APP = "app"
+     $env:FLASK_APP = "backend/app"
      ```
    - On macOS and Linux:
      ```
-     export FLASK_APP=app
+     export FLASK_APP=backend/app
      ```
      
 6. Run the Flask app:
@@ -56,7 +52,8 @@ python 3.8.6 (at least)
    
 7. You can run the tests with the following command:
     ```
-    pytest tests/tests.py
+   export PYTHONPATH=$PYTHONPATH:.
+    pytest backend/tests/tests.py
    ```
 
 ## Client
@@ -71,11 +68,14 @@ node version higher than 17 (I used 20.5.0)
     ```
    cd frontend
    ```
-
-2. Start the React app:
+2. Install dependencies:
+    ```
+   npm install
+   ```
+   
+3. Start the React app:
     ```
    npm start
    ```
-
 
 If you have any other questions, fell free to send a message: danielsht11@gmail.com
