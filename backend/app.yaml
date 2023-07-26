@@ -1,3 +1,2 @@
 service: autofleet-backend
 runtime: python38
-api_version: 1
