@@ -1,9 +1,8 @@
 from flask.views import MethodView
 from flask_smorest import Blueprint
-from backend.schemas import PlainVehicleSchema, VehicleSchema, PolygonSchema
+from schemas import PlainVehicleSchema, VehicleSchema, PolygonSchema
 from shapely import Polygon
 from .db_resolver import db_session
-
 
 blp = Blueprint("Vehicles", "vehicles", description="Operations on vehicles")
 

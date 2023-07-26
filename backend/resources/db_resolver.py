@@ -1,6 +1,6 @@
 import json
 from os import path
-from ..root import SITE_ROOT
+from .root import SITE_ROOT
 from shapely import Polygon, Point
 
 
