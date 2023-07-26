@@ -5,7 +5,7 @@ from shapely import Polygon, Point
 
 
 def load_json():
-    json_dir = path.join(SITE_ROOT, "static/data", "vehicles-location.json")
+    json_dir = path.join(SITE_ROOT, "resources/static/data", "vehicles-location.json")
     try:
         with open(json_dir, 'r') as json_file:
             data = json.load(json_file)
