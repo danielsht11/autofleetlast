@@ -5,3 +5,4 @@ pytest
 requests
 shapely
 flask-cors
+gunicorn
