@@ -1,2 +1,2 @@
-service: autofleet-backend
+service: default
 runtime: python38
