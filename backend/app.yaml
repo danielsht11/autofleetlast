@@ -6,6 +6,6 @@ automatic_scaling:
 
 handlers:
   - url: /
-    script: app.py
+    script: main.py
   - url: /.*
-    script: app.py
+    script: main.py
