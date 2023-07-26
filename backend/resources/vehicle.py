@@ -7,14 +7,14 @@ from .db_resolver import db_session
 blp = Blueprint("Vehicles", "vehicles", description="Operations on vehicles")
 
 
-@blp.route("vehicles")
+@blp.route("/api/vehicles")
 class Vehicles(MethodView):
     @blp.response(200, VehicleSchema(many=True))
     def get(self):
         return db_session.data
 
 
-@blp.route("vehicles/polygon", methods=["POST"])
+@blp.route("/api/vehicles/polygon", methods=["POST"])
 class VehiclesPolygon(MethodView):
     @blp.arguments(PolygonSchema, location="json")
     @blp.response(200, PlainVehicleSchema(many=True))
