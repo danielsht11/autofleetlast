@@ -45,7 +45,7 @@ const MapComponent = () => {
       name: filterRef.current.name
     };
 
-    axios.post("/api/polygon", dataToSend).then((response) => {
+    axios.post("/api/vehicles/polygon", dataToSend).then((response) => {
       setSelectedVehicles(response.data);
       setModalIsOpen(true);
     });
