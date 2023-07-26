@@ -1,6 +1,6 @@
 from flask.views import MethodView
 from flask_smorest import Blueprint
-from ..schemas import PlainVehicleSchema, VehicleSchema, PolygonSchema
+from backend.schemas import PlainVehicleSchema, VehicleSchema, PolygonSchema
 from shapely import Polygon
 from .db_resolver import db_session
 
