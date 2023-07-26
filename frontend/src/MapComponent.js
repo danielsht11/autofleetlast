@@ -24,7 +24,7 @@ const MapComponent = () => {
 
   const fetchData = () => {
     axios
-      .get("http://127.0.0.1:5000/vehicles")
+      .get("/api/vehicles")
       .then((response) => {
         console.log("Received data:", response.data);
         setVehicles(response.data);
@@ -45,7 +45,7 @@ const MapComponent = () => {
       name: filterRef.current.name
     };
 
-    axios.post("http://127.0.0.1:5000/vehicles/polygon", dataToSend).then((response) => {
+    axios.post("/api/polygon", dataToSend).then((response) => {
       setSelectedVehicles(response.data);
       setModalIsOpen(true);
     });
