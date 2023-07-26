@@ -82,4 +82,4 @@ node version higher than 17 (I used 20.5.0)
    npm start
    ```
 
-If you have any other questions, fell free to send a message: danielsht11@gmail.com
+If you have any other questions, feel free to send a message: danielsht11@gmail.com
