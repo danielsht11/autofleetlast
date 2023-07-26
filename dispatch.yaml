@@ -1,5 +1,6 @@
 dispatch:
   - url: '*/api'
     service: api
+
   - url: '*/autofleet-dashboard/*'
     service: default
