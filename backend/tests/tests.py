@@ -1,6 +1,6 @@
 import pytest
 from requests import Response
-from backend.app import create_app
+from backend.main import create_app
 from backend.resources.db_resolver import load_json
 from shapely import Point, Polygon
 
