@@ -1,6 +1,6 @@
 from flask_smorest import Api
 from flask import Flask
-from backend.resources import VehicleBluePrint
+from resources import VehicleBluePrint
 from flask_cors import CORS
 
 
