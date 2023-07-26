@@ -5,8 +5,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/autofleet-dashboard" element={<MapComponent />} />
-        <Route path="/" element={<Navigate to="/autofleet-dashboard" />} />
+        <Route path="/" element={<MapComponent />} />
       </Routes>
     </Router>
   );
