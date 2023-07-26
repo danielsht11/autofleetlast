@@ -16,7 +16,7 @@ def load_json():
         print("Decoding json has failed!")
 
 
-class Router:
+class DB:
     def __init__(self):
         self.data = load_json()
 
@@ -50,4 +50,4 @@ class Router:
         return vehicles_in_polygon
 
 
-db_session = Router()
+db_session = DB()

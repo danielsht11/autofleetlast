@@ -2,7 +2,7 @@ from flask.views import MethodView
 from flask_smorest import Blueprint
 from ..schemas import PlainVehicleSchema, VehicleSchema, PolygonSchema
 from shapely import Polygon
-from .router import db_session
+from .db_resolver import db_session
 
 
 blp = Blueprint("Vehicles", "vehicles", description="Operations on vehicles")
