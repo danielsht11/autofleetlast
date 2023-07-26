@@ -110,7 +110,7 @@ def filtered_polygon_vehicles_ids(vehicles_in_polygon, state, vehicle_class):
 
 
 def test_get_all_vehicles_location(client, all_locations):
-    response: Response = client.get("/vehicles")
+    response: Response = client.get("/api/vehicles")
     assert response.status_code == 200
     assert isinstance(response.json, list)
     assert len(response.json) == len(all_locations)
@@ -125,7 +125,7 @@ def test_get_all_ids_in_polygon(client, polygon_points, vehicles_ids_in_polygon)
         "state": "",
         "name": ""
     }
-    response: Response = client.post("vehicles/polygon", json=polygon_data)
+    response: Response = client.post("/api/vehicles/polygon", json=polygon_data)
     assert response.status_code == 200
     assert isinstance(response.json, list)
     assert len(response.json) == len(vehicles_ids_in_polygon)
@@ -140,7 +140,7 @@ def test_get_all_ids_in_filtered_polygon(client, polygon_points, state, vehicle_
         "name": vehicle_class
         }
 
-    response: Response = client.post("vehicles/polygon", json=polygon_data)
+    response: Response = client.post("/api/vehicles/polygon", json=polygon_data)
     assert response.status_code == 200
     assert isinstance(response.json, list)
     assert len(response.json) == len(filtered_polygon_vehicles_ids)
