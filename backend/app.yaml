@@ -1,2 +1,2 @@
-service: default
+service: api
 runtime: python38
