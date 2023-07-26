@@ -31,7 +31,7 @@ python 3.8.6 (at least)
    pip install -r requirements.txt
    ```
 
-5. Set the Flask app environment variable:
+4. Set the Flask app environment variable:
    - On Windows (Command Prompt):
      ```
      set FLASK_APP=backend/app
@@ -44,7 +44,12 @@ python 3.8.6 (at least)
      ```
      export FLASK_APP=backend/app
      ```
-     
+
+5. Add the current directory to the Python path:
+    ```
+    export PYTHONPATH=$PYTHONPATH:.
+   ```
+   
 6. Run the Flask app:
     ```
     flask run
@@ -52,7 +57,6 @@ python 3.8.6 (at least)
    
 7. You can run the tests with the following command:
     ```
-   export PYTHONPATH=$PYTHONPATH:.
     pytest backend/tests/tests.py
    ```
 
